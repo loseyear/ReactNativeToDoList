@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     TextInput,
+    Button,
     Text,
     View,
 } from 'react-native';
@@ -10,41 +11,42 @@ import PTD from './../../library/PxToDp';
 
 const s = StyleSheet.create({
     box: {
-        marginTop: PTD(6),
-        width: PTD(375),
-        height: PTD(30),
-        fontSize: 20,
-        backgroundColor: 'rgba(0, 0, 0, .1)',
+        marginTop: PTD(20),
     }
 });
 
 export default class Header extends Component {
-    constructor(props) {
-        super(props);
-        this.state= {
-            value: '',
-        }
+    _allChecked() {
+        this.props.allChecked();
     }
-    _add(e) {
-        if (e.nativeEvent.key !== 'Enter') return;
-        const newTodoItem = {
-            text: this.state.value,
-            isDone: false
-        }
-        this.setState({
-            value: ''
-        });
-        this.props.add(newTodoItem);
+    _allDoneDelete() {
+        this.props.allDoneDelete();
+    }
+    _allDelete() {
+        this.props.allDelete();
     }
     render() {
+        const { count, doneCount } = this.props;
+
         return (
-            <View>
-                <TextInput
-                    style={s.box}
-                    onChangeText={(value) => this.setState({value})}
-                    onKeyPress={this._add.bind(this)}
-                    placeholder='请输入新的待做事项'
-                    value={this.state.value}
+            <View style={s.box} >
+                <Text
+                    style={{textAlign: 'center'}}
+                >共{count}条数据,其中已完成{doneCount}条</Text>
+                <Button
+                    title='全选'
+                    disabled={count === doneCount ? true : false}
+                    onPress={() => this._allChecked()}
+                />
+                <Button
+                    title='删除全部已完成'
+                    disabled={doneCount > 0 ? false: true}
+                    onPress={() => this._allDoneDelete()}
+                />
+                <Button
+                    title='删除全部'
+                    disabled={count > 0 ? false: true}
+                    onPress={() => this._allDelete()}
                 />
             </View>
         );

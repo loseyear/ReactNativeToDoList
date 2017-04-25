@@ -1,36 +1,38 @@
 {
-    "name": "ReactNativeToDoList",
-    "version": "0.0.1",
-    "private": true,
-    "scripts": {
-        "start": "node node_modules/react-native/local-cli/cli.js start",
-        "ios": "react-native run-ios",
-        "android": "react-native run-android",
-        "test": "jest"
-    },
-    "dependencies": {
-        "react": "16.0.0-alpha.6",
-        "react-native": "0.43.3"
-    },
-    "devDependencies": {
-        "babel-jest": "19.0.0",
-        "babel-preset-react-native": "1.9.1",
-        "jest": "19.0.2",
-        "react-test-renderer": "16.0.0-alpha.6"
-    },
-    "jest": {
-        "preset": "react-native"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/loseyear/ReactNativeToDoList.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/loseyear/ReactNativeToDoList/issues"
-    },
-    "homepage": "https://github.com/loseyear/ReactNativeToDoList#readme",
-    "description": ""
+  "name": "ReactNativeToDoList",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.43.3",
+    "react-native-check-box": "^1.0.4",
+    "react-native-storage": "^0.1.5"
+  },
+  "devDependencies": {
+    "babel-jest": "19.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "jest": "19.0.2",
+    "react-test-renderer": "16.0.0-alpha.6"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loseyear/ReactNativeToDoList.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loseyear/ReactNativeToDoList/issues"
+  },
+  "homepage": "https://github.com/loseyear/ReactNativeToDoList#readme",
+  "description": ""
 }
