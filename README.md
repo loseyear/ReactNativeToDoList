@@ -16,3 +16,7 @@ react-native run-android
 ```
 https://github.com/sunnylqm/react-native-storage
 ```
+
+## 程序截图
+![iPhone](https://raw.githubusercontent.com/loseyear/ReactNativeToDoList/master/app/ios.gif)
+![Android](https://raw.githubusercontent.com/loseyear/ReactNativeToDoList/master/app/android.gif)
