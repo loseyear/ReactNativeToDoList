@@ -12,3 +12,7 @@ android avd // 然后启动虚拟机
 
 react-native run-android
 ```
+
+```
+https://github.com/sunnylqm/react-native-storage
+```

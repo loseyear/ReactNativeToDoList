@@ -20,7 +20,8 @@ const s = StyleSheet.create({
     },
     text: {
         width: PTD(200),
-        lineHeight: PTD(40),
+        marginTop: PTD(4),
+        marginLeft: PTD(10),
     },
     isCheck: {
         backgroundColor: 'rgba(0, 0, 0, .1)',
